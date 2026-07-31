@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartMail AI | Email Reply Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <header>
+        <div class="logo">
+            <span>✉</span>
+            SmartMail <b>AI</b>
+        </div>
+
+        <div class="badge">✨ AI Reply Assistant</div>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-text">
+                <p class="small-title">SMART EMAIL ASSISTANT</p>
+
+                <h1>
+                    Write better emails.<br>
+                    <span>Reply smarter.</span>
+                </h1>
+
+                <p class="description">
+                    Paste an email, choose your preferred tone,
+                    and generate professional replies in seconds.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="generator">
+
+            <!-- LEFT SIDE -->
+            <div class="input-card">
+
+                <div class="card-header">
+                    <div>
+                        <h2>📩 Incoming Email</h2>
+                        <p>Paste the email you received</p>
+                    </div>
+
+                    <span class="step">01</span>
+                </div>
+
+                <textarea
+                    id="email"
+                    placeholder="Example:
+
+Dear Sakshi,
+Please submit the project report by Monday.
+Thank you."></textarea>
+
+
+                <div class="options">
+
+                    <div class="tone-box">
+                        <label>Reply Tone</label>
+
+                        <select id="tone">
+                            <option value="formal">👔 Formal</option>
+                            <option value="friendly">😊 Friendly</option>
+                            <option value="professional">💼 Professional</option>
+                        </select>
+                    </div>
+
+                    <button class="generate-btn" onclick="generateReply()">
+                        Generate Reply
+                        <span>➜</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="output-card">
+
+                <div class="card-header">
+                    <div>
+                        <h2>✨ Suggested Replies</h2>
+                        <p>Choose the reply that works best for you</p>
+                    </div>
+
+                    <span class="step">02</span>
+                </div>
+
+
+                <div class="reply-box">
+                    <div class="reply-number">01</div>
+
+                    <p id="reply1">
+                        Your generated reply will appear here...
+                    </p>
+
+                    <button onclick="copyReply('reply1')">
+                        📋 Copy
+                    </button>
+                </div>
+
+
+                <div class="reply-box">
+                    <div class="reply-number">02</div>
+
+                    <p id="reply2">
+                        Your second suggestion will appear here...
+                    </p>
+
+                    <button onclick="copyReply('reply2')">
+                        📋 Copy
+                    </button>
+                </div>
+
+
+                <div class="reply-box">
+                    <div class="reply-number">03</div>
+
+                    <p id="reply3">
+                        Your third suggestion will appear here...
+                    </p>
+
+                    <button onclick="copyReply('reply3')">
+                        📋 Copy
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>⚡ SmartMail AI • Fast • Professional • Simple</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
